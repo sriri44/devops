@@ -1,0 +1,11 @@
+1) go to my account and create a docker file for my repo by going through all requirements and files yourself
+
+2) Create a GitHub Actions CI/CD workflow that triggers on a push to the main branch. The workflow should:
+Build a Docker image and push it to Docker Hub, using DOCKER_USERNAME and DOCKER_PAT stored in GitHub Secrets (already configured).
+Use the already-configured SERVICE_ACCOUNT GitHub secret to authenticate with Google Cloud.
+Use two additional secrets: YOUR_GCP_PROJECT_ID and YOUR_GCP_ZONE for the GCP project ID and zone, respectively.
+Assume the Google Cloud instance named heavy-server is already running — do not include logic to start it.
+SSH into the instance with gcp user and run all required Docker commands (delete existing image, pull latest image, stop and remove running container, and run a new container) in a single-line command string to avoid multi-line errors with gcloud compute ssh.
+When running the new Docker container stop or remove any container with the same name before running, bind the container to port 3000. also i have logs in /logs/app.log
+Dont make the workflow file complex.
+**Remember** all are in secrets

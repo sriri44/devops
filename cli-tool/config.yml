@@ -1,0 +1,41 @@
+DevopsConfig:
+  Github:
+    Repository: "nanda-kshr/instaroid"
+    Environment:
+      Production:
+        Branch: "main"
+      Staging:
+        Branch: "staging"
+      Development:
+        Branch: "development"
+      Test:
+        Branch: "test"
+      QA:
+        Branch: "qa"
+      PreProduction:
+        Branch: "pre-production"
+
+  Cloud:
+    GCP:
+      USER-IP: "nandakishorep@34.68.242.20"
+      KEYFILE: "~/.ssh/id_ed25519"
+      Zone: "asia-south1-a"
+      Region: "asia-south1"
+      Compute-Type: "e2-micro"
+      Name: "mahi"
+
+  Tools:
+    Docker: true
+    Kubernetes: true
+    Instances: true
+    Monitoring: true
+    Logging: true
+    Nginx: true
+    Prometheus: true
+    Grafana: true
+
+  Explanation:
+    Explanation: "This is a Nextjs website and dockerized application"
+
+  Health-check-apis:
+    - https://meheer.vercel.app
